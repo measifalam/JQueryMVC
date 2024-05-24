@@ -18,7 +18,9 @@
     </div>
 
     <div>
-        <button type="button" onclick="result()">Submit</button>
+        <button type="button" onclick="Add()" class="btn btn-success">Add</button>
+        <button type="button" onclick="Sub()" class="btn btn-success">Sub</button>
+        <button type="button" onclick="Mul()" class="btn btn-success">Mul</button>
     </div>
 
     <div id="result"></div>
@@ -26,14 +28,32 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
 
-        function result()
+        function Add()
         {
             var x = parseInt($("#value1").val());
             var y = parseInt($("#value2").val());
 
             var res = x + y;
 
-            alert(res);
+            $("#result").html(res);
+        }
+
+        function Sub() {
+            var x = parseInt($("#value1").val());
+            var y = parseInt($("#value2").val());
+
+            var res = x - y;
+
+            $("#result").html(res);
+        }
+
+        function Mul() {
+            var x = parseInt($("#value1").val());
+            var y = parseInt($("#value2").val());
+
+            var res = x * y;
+
+            $("#result").html(res);
         }
 
     </script>
