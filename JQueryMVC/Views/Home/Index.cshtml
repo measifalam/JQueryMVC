@@ -33,28 +33,40 @@
             var x = parseInt($("#value1").val());
             var y = parseInt($("#value2").val());
 
-            var res = x + y;
+            $.ajax({
+                type:"POST",
+                url:"@Url.Action("Add","Home")",
+                data: { num1:x,num2:y},
+                dataType:"text",
+                success:function(msg){
+                    alert(msg)
+                    console.log(msg)
+                    $("#result").html(msg)
+                },
+                error:function(req,status,err){
 
-            $("#result").html(res);
+                }
+            })
+
         }
 
-        function Sub() {
-            var x = parseInt($("#value1").val());
-            var y = parseInt($("#value2").val());
+        // function Sub() {
+        //     var x = parseInt($("#value1").val());
+        //     var y = parseInt($("#value2").val());
 
-            var res = x - y;
+        //     var res = x - y;
 
-            $("#result").html(res);
-        }
+        //     $("#result").html(res);
+        // }
 
-        function Mul() {
-            var x = parseInt($("#value1").val());
-            var y = parseInt($("#value2").val());
+        // function Mul() {
+        //     var x = parseInt($("#value1").val());
+        //     var y = parseInt($("#value2").val());
 
-            var res = x * y;
+        //     var res = x * y;
 
-            $("#result").html(res);
-        }
+        //     $("#result").html(res);
+        // }
 
     </script>
 

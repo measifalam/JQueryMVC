@@ -18,6 +18,14 @@ namespace JQueryMVC.Controllers
             return View();
         }
 
+        [HttpPost]
+        public int Add(int num1,int num2)
+        {
+            var result = num1+num2;
+
+            return result;
+        }
+
         public IActionResult Privacy()
         {
             return View();
