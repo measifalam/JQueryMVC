@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">JQuery in .Net Core MVC</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div>
+        <label>First Value</label>
+        <input type="text" name="value1" value="" id="value1" />
+    </div>
+    
+
+    <div>
+        <label>Second Value</label>
+        <input type="text" name="value2" value="" id="value2" />
+    </div>
+
+    <div>
+        <button type="button" onclick="result()">Submit</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        function result()
+        {
+            var x = parseInt($("#value1").val());
+            var y = parseInt($("#value2").val());
+
+            var res = x + y;
+
+            alert(res);
+        }
+
+    </script>
+
+</div>
