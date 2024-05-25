@@ -91,9 +91,9 @@
                 type: "POST",
                 url: "@Url.Action("CalculateNumber", "Home")",
                 data: { num1: x, num2: y,"msg" : "measifalam" },
-                dataType:"text",
+                dataType:"json",
                 success: function (result) {
-                    $("#result").html(result);
+                    $("#result").html(result.add);
 
                 },
                 error:function(req,status,error)
