@@ -93,7 +93,12 @@
                 data: { num1: x, num2: y,"msg" : "measifalam" },
                 dataType:"json",
                 success: function (result) {
-                    $("#result").html(result.add);
+
+                    var ans = "Sum:" + result.add + "Sub:" + result.sub + "Mul:" + result.mul + "Div:" + result.divide;
+
+
+
+                    $("#result").html(ans);
 
                 },
                 error:function(req,status,error)
