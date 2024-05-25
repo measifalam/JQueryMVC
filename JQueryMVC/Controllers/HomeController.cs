@@ -27,13 +27,14 @@ namespace JQueryMVC.Controllers
         }
 
 
-        public Calculate CalculateNumber(int num1,int num2) 
+        public Calculate CalculateNumber(int num1,int num2, string msg) 
         { 
             Calculate calculate = new Calculate();
             calculate.Add=num1 + num2;
             calculate.Sub = num1 - num2;
             calculate.Mul = num1 * num2;
             calculate.Divide = num1 / num2;
+
             return calculate;
         }
 

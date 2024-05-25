@@ -90,7 +90,7 @@
                
                 type: "POST",
                 url: "@Url.Action("CalculateNumber", "Home")",
-                data: { num1: x, num2: y },
+                data: { num1: x, num2: y,"msg" : "measifalam" },
                 dataType:"text",
                 success: function (result) {
                     $("#result").html(result);
